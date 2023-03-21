@@ -35,7 +35,7 @@ class ImbalanceDuzenle:
 
     def Smote(self):
         smote = SMOTE()
-        X_smote, y_smote = smote.fit_sample(self.X, self.y)
+        X_smote, y_smote = smote.fit_resample(self.X, self.y)
         print('orjinal veri boyutu', self.y.value_counts())
         print('TL yapıldıktan sonra veri boyutu:', y_smote.value_counts())
         return X_smote, y_smote
